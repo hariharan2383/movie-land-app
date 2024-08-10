@@ -27,9 +27,10 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'robocopy build C:\\inetpub\\wwwroot\\movieland /mir'
+                bat 'robocopy build C:\\inetpub\\wwwroot\\movieland /mir || exit /b 0'
                 bat 'iisreset /restart'
-            }
-        }
+    }
+}
+
     }
 }
