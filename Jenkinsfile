@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/hariharan2383/movie-land-app.git'
+                // Specify the branch explicitly
+                git branch: 'main', url: 'https://github.com/hariharan2383/movie-land-app.git'
             }
         }
 
