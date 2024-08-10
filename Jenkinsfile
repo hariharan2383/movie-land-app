@@ -26,7 +26,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'xcopy /s /e /y build\\* C:\\inetpub\\wwwroot\\movieland\\'
+                bat 'robocopy build C:\\inetpub\\wwwroot\\movieland /mir'
                 bat 'iisreset /restart'
             }
         }
