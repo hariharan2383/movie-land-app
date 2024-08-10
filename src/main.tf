@@ -1,30 +1,16 @@
-terraform {
-  required_providers {
-    windows = {
-      source  = "terraform-providers/windows"
-      version = "~> 0.1"
-    }
-  }
-}
-
-provider "windows" {}
+provider "null" {}
 
 # Enable IIS feature
-resource "windows_feature" "iis" {
-  name = "Web-Server"
+resource "null_resource" "enable_iis" {
+  provisioner "local-exec" {
+    command = "powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole -All"
+  }
 }
 
 # Enable IIS Management Console
-resource "windows_feature" "iis_mgmt_console" {
-  name = "Web-Mgmt-Console"
-}
-
-# Create a new IIS website
-resource "windows_iis_website" "movieland" {
-  name           = "movieland"
-  physical_path  = "C:\\inetpub\\wwwroot\\movieland"
-  binding {
-    port = 80
+resource "null_resource" "enable_iis_mgmt_console" {
+  provisioner "local-exec" {
+    command = "powershell.exe Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerManagementTools -All"
   }
-  depends_on = [windows_feature.iis]
+  depends_on = [null_resource.enable_iis]
 }
