@@ -32,7 +32,7 @@ pipeline {
                 bat 'iisreset /restart'
     }
 }
-        stage('Infrastructure automation with Terraform') {
+        stage('Infrastructure Automation with Terraform') {
             steps {
                 dir('C:/Users/SriHariharan/Desktop/movie-land-app/movieland/src') {
                     script {
