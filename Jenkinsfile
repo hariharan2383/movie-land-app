@@ -31,6 +31,15 @@ pipeline {
                 bat 'iisreset /restart'
     }
 }
+        stage('Provision Infrastructure with Terraform') {
+            steps {
+                dir('terraform') {
+                    script {
+                        bat 'terraform init'
+                        bat 'terraform apply -auto-approve'
+                    }
+                }
+            }
 
     }
 }
