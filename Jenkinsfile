@@ -31,7 +31,7 @@ pipeline {
                 bat 'iisreset /restart'
     }
 }
-        stage('Infrastructure with Terraform') {
+        stage('Infrastructure Automation with Terraform') {
             steps {
                 dir('terraform') {
                     script {
