@@ -34,7 +34,7 @@ pipeline {
 }
         stage('Infrastructure automation with Terraform') {
             steps {
-                dir('terraform') {
+                dir('C:\Users\SriHariharan\Desktop\movie-land-app\movieland\src\main.tf') {
                     script {
                         bat 'terraform init'
                         bat 'terraform apply -auto-approve'
