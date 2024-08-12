@@ -9,7 +9,7 @@ import MovieCard from './Components/Moviecard';
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=38c5bcd0'
 
 // const movie1 = {
-//   "Title": "The Amazing Spiderman",
+//   "Title": "The Amazing Spiderman 2",
 //   "Year": "2009",
 //   "imdbID": "tt1433184",
 //   "Type": "movie",
