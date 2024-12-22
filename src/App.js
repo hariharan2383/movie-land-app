@@ -27,7 +27,7 @@ function App() {
     setMovies(data.Search);
   }
   useEffect(() => {
-    searchMovies('Harry potter');
+    searchMovies('Spiderman');
 
   }, []);
 
@@ -57,7 +57,7 @@ function App() {
           </div>) :
           (
             <div className='empty'>
-              <h2>No movies Found</h2></div>
+              <h2>No Movies Found</h2></div>
           )
       }
 
