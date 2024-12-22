@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Specify the branch explicitly
-                git branch: 'main', url: 'https://github.com/hariharan2383/movie-land-app.git'
+                git branch: 'main', url: 'https://github.com/hariharan2383/movie-land-app.git', shallow: true
             }
         }
 
@@ -28,10 +28,11 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'robocopy build C:\\inetpub\\wwwroot\\movieland /mir || exit /b 0'
+                bat 'robocopy build C:\\inetpub\\wwwroot\\movieland /mir /np || exit /b 0'
                 bat 'iisreset /restart'
-    }
-}
+            }
+        }
+
         stage('Infrastructure Automation with Terraform') {
             steps {
                 dir('C:/Users/SriHariharan/Desktop/movie-land-app/movieland/src') {
@@ -41,7 +42,6 @@ pipeline {
                     }
                 }
             }
-
+        }
     }
-}
 }
