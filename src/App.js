@@ -37,7 +37,7 @@ function App() {
       <h1>MovieLand</h1>
       <div className='search'>
         <input
-          placeholder='search for Movies'
+          placeholder='Search for Movies...'
           value={searchTerm}
           onChange={(e) =>setSearchTerm(e.target.value)}
         />
