@@ -11,8 +11,8 @@ const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=38c5bcd0'
 // const movie1 = {
 //   "Title": "spiderman",
 //   "Year": "2009",
-//   "imdbID": "tt1433184",
-//   "Type": "movie",
+//   "imdbID": "Tt1433184",
+//   "Type": "movie1",
 //   "Poster": "https://m.media-amazon.com/images/M/MV5BMjE3Mzg0MjAxMl5BMl5BanBnXkFtZTcwNjIyODg5Mg@@._V1_SX300.jpg"
 // }
 
