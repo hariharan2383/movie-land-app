@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Specify the branch explicitly
-                git branch: 'main', url: 'https://github.com/hariharan2383/movie-land-app.git', shallow: true
+                // Use the depth parameter for shallow clone
+                git branch: 'main', url: 'https://github.com/hariharan2383/movie-land-app.git'
             }
         }
 
