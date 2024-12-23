@@ -9,7 +9,7 @@ import MovieCard from './Components/Moviecard';
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=38c5bcd0'
 
 // const movie1 = {
-//   "Title": "Spideerman",
+//   "Title": "heman",
 //   "Year": "2009",
 //   "imdbID": "Tt1433184",
 //   "Type": "Movie2",
